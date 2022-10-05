@@ -1,12 +1,22 @@
 <template>
   <div class="content">
-    <div class="title m-b-md">Work in progress</div>
+    <AppHeader :title="title" />
   </div>
 </template>
 
 <script>
+import AppHeader from "./AppHeader";
 export default {
-  name: "app",
+  name: "App",
+
+  components: {
+    AppHeader,
+  },
+  data() {
+    return {
+      title: "Boolpress",
+    };
+  },
 };
 </script>
 
