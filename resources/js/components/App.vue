@@ -2,20 +2,24 @@
   <div class="content">
     <AppHeader :title="title" />
     <main class="container mt-3">
-      <PostList />
+      <!-- <HomePage /> -->
+      <router-view></router-view>
     </main>
   </div>
 </template>
 
 <script>
 import AppHeader from "./AppHeader";
-import PostList from "./posts/PostList";
+import ContactsPage from "../components/pages/ContactsPage";
+
+import HomePage from "./pages/HomePage";
 export default {
   name: "App",
 
   components: {
+    HomePage,
+    ContactsPage,
     AppHeader,
-    PostList,
   },
   data() {
     return {

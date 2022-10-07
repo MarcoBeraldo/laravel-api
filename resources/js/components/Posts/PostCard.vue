@@ -1,7 +1,14 @@
 <template>
   <div class="card mb-3">
     <div class="card-body">
-      <h5 class="card-title">{{ post.title }}</h5>
+      <div class="d-flex justify-content-between">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <router-link
+          :to="{ name: 'post-detail', params: { id: post.id } }"
+          class="btn btn-primary btn-sm"
+          >Vedi</router-link
+        >
+      </div>
       <h6 class="card-subtitle mb-2 text-muted">
         Pubblicato il: {{ publishedAt }}
       </h6>
